@@ -1,0 +1,26 @@
+{{#isFirstPage}}
+    {{#group}}
+        {{>group/groupExpanded}}
+    {{/group}}
+{{/isFirstPage}}
+
+{{#products}}
+<tr class="rm{{groupId}}">
+    <td></td>
+    <td>{{id}}</td>
+    <td>{{description}}</td>
+    <td><a>Edit product</a></td>
+</tr>
+{{/products}}
+{{#hasMore}}
+<tr class="rm{{groupId}}">
+    <td colspan="4">
+        <a href="#" title="Products"
+           hx-get="/products/group/{{groupId}}/page/{{pageNumber}}"
+           hx-target="closest tr"
+           hx-swap="outerHTML">
+          Nachladen...
+        </a>
+    </td>
+</tr>
+{{/hasMore}}

@@ -1,0 +1,14 @@
+<tr id="group{{id}}">
+    <td>
+        <a href="#" title="Group {{id}}"
+           hx-get="/group/{{id}}"
+           hx-target="closest tr" hx-swap="outerHTML"
+           onclick="document.querySelectorAll('.rm{{id}}').forEach(el => el.remove());"
+        >
+            <i class="bi bi-caret-down-fill"></i>
+        </a>
+    </td>
+    <td>{{id}}</td>
+    <td>{{description}}</td>
+    <td>{{>group/editLinkPartial}}</td>
+</tr>

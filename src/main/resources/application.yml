@@ -1,0 +1,37 @@
+server:
+  port: 3000
+
+spring:
+  session:
+    timeout: 8h
+    jdbc:
+      schema: "classpath:org/springframework/session/jdbc/schema-@@platform@@.sql"
+      initialize-schema: always
+
+  mustache:
+    suffix:
+      .html
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Europe/Berlin
+
+  datasource:
+    url: jdbc:mariadb://localhost:3301/logistics?allowPublicKeyRetrieval=true
+    username: root
+    password: root-password
+    driver-class-name: org.mariadb.jdbc.Driver
+
+pagination:
+  perPage: 3
+
+sso:
+  ssoHost: http://localhost:8001
+  tokenURI: /auth/realms/protocol/openid-connect/token
+  callbackURL: http://localhost:3000/auth/shop/oauth2/callback

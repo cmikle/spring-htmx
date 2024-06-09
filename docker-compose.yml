@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=caching_sha2_password
+    networks:
+      default:
+    environment:
+      MYSQL_ROOT_PASSWORD: root-password
+      TZ: Europe/Berlin
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d/
+    ports:
+      - "3301:3306"
+

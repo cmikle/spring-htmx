@@ -1,0 +1,16 @@
+{{#groups}}
+    {{>group/groupCollapsed}}
+{{/groups}}
+
+{{#hasMore}}
+<tr>
+    <td colspan="4">
+        <a href="#" title="Groups"
+           hx-get="/groups/page/{{pageNumber}}"
+           hx-target="closest tr"
+           hx-swap="outerHTML">
+           Nachladen...
+        </a>
+    </td>
+</tr>
+{{/hasMore}}

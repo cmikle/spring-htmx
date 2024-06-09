@@ -1,0 +1,23 @@
+{{#modal}}
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div style="width: 80%" class="container my-5">
+            <form
+                hx-post="/group/save"
+                hx-target="#group{{group.id}}"
+                hx-swap="outerHTML"
+            >
+                <input type="hidden" name="groupId" value="{{group.id}}">
+
+                <div class="col-12">
+                    <label for="groupDescription" class="form-label">Produktgruppenbezeichnung</label>
+                    <input width="120" type="text" value="{{group.description}}" class="form-control" id="groupDescription" name="groupDescription" required>
+                </div>
+                <br />
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Speichern</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{/modal}}

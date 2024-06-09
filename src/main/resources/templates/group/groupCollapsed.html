@@ -1,0 +1,14 @@
+<tr id="group{{id}}">
+    <td>
+        <a href="#" title="Products"
+           hx-get="/products/group/{{id}}/page/1"
+           hx-target="closest tr"
+           hx-swap="outerHTML"
+        >
+          <i class="bi bi-caret-right-fill"></i>
+        </a>
+    </td>
+    <td>{{id}}</td>
+    <td>{{description}}</td>
+    <td>{{>group/editLinkPartial}}</td>
+</tr>

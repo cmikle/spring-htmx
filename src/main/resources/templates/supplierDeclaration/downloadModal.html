@@ -1,0 +1,14 @@
+{{#modal}}
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div style="width: 80%" class="container my-5">
+            <form action="/suppliersDeclarationDownload/{{itemId}}" method="get">
+                <div class="col-12 mb-2">
+                    <i>Das Dokument zur Auftragsnummer {{itemId}} ist bereitgestellt</i>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Herunterladen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{/modal}}

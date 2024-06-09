@@ -1,0 +1,25 @@
+{{#modal}}
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div style="width: 80%" class="container my-5">
+            <form
+                hx-post="/suppliersDeclarationCreate"
+                hx-target="#modal-content"
+                hx-swap="innerHTML"
+                hx-ext="json-enc"
+            >
+                <div class="col-12 mb-2">
+                    <label for="itemId" class="form-label">Auftragsnummer</label>
+                    <input width="120" type="text" class="form-control" id="itemId" name="itemId" placeholder="DE000001_1" required>
+                </div>
+                {{#incorrect}}
+                <div class="alert alert-danger" role="alert">
+                    Unbekannte oder falsche Auftragsnummer
+                </div>
+                {{/incorrect}}
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Erstellen</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{/modal}}
