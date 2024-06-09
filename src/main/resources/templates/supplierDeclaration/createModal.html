@@ -8,16 +8,16 @@
                 hx-ext="json-enc"
             >
                 <div class="col-12 mb-2">
-                    <label for="itemId" class="form-label">Auftragsnummer</label>
+                    <label for="itemId" class="form-label">Order number</label>
                     <input width="120" type="text" class="form-control" id="itemId" name="itemId" placeholder="DE000001_1" required>
                 </div>
                 {{#incorrect}}
                 <div class="alert alert-danger" role="alert">
-                    Unbekannte oder falsche Auftragsnummer
+                    Unknown or incorrect order number
                 </div>
                 {{/incorrect}}
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Erstellen</button>
+                    <button class="btn btn-primary" type="submit">Create</button>
                 </div>
             </form>
         </div>

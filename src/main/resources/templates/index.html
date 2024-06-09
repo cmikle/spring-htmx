@@ -12,19 +12,19 @@
                 document.getElementById('closeModal').click();
             });
         </script>
-        <title>Zolldatenverwaltung</title>
+        <title>Product duty</title>
     </head>
     <body style="height: 100%">
         <div class="row justify-content-between">
             <div class="col-4">
-                <a href="#" title="Lieferantenerklärung generieren"
+                <a href="#" title="Generate document"
                    hx-get="/suppliersDeclarationModal"
                    hx-target="#modal-content"
                    hx-swap="innerHTML"
                    data-bs-toggle="modal"
                    data-bs-target="#modal-singleton"
                 >
-                    Lieferantenerklärung generieren
+                    Generate document
                 </a>
             </div>
             <div class="col-4">
@@ -40,7 +40,7 @@
                hx-ext="json-enc"
             >
                 <div class="col-12 w-25 p-3">
-                    <label for="productGroup" class="form-label">Nach Produktgruppe filtern</label>
+                    <label for="productGroup" class="form-label">Filter product group</label>
                     <input width="100" type="text" placeholder="3001" class="form-control" id="productGroup" name="productGroup">
                 </div>
             </form>
